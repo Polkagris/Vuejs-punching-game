@@ -1,0 +1,42 @@
+body{
+  background-color: grey;
+}
+
+.title{
+  text-align: center;
+  font-size: 70px;
+}
+#bag{
+  width: 200px;
+  height: 550px;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-image: url("./img/bag.png");
+}
+.bag-burst{
+  width: 200px;
+  height: 550px;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-image: url("./img/bag-burst.png");
+}
+.healthBar{
+  width: 300px;
+  border: 1px solid black;
+  margin: auto;
+
+}
+.healthBar div{
+  height: 20px;
+  background-color: green;
+}
+#controls{
+  margin: 20px;
+  padding: 30px;
+}
+button.col-sm{
+  margin: 40px;
+}
+.game{
+  margin: auto;
+}

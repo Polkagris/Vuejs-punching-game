@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-lg">
+        <h1 class="title">Punching Game!</h1>
+      </div>
+    </div>
+    <!-- Punching bag image -->
+    <div id="bag" class="row" v-if="!gameOver"></div>
+    <div v-if="gameOver" class="bag-burst"></div>
+
+    <!-- Health bar -->
+    <div class="healthBar row">
+      <div class="green" v-bind:style="{width: health + '%'}"></div>
+    </div>
+
+    <!-- Controls -->
+    <div id="controls" class="row">
+      <button v-on:click="punch" v-if="!gameOver" class="btn btn-danger col-sm">Puch!</button>
+      <button v-on:click="restart" class="btn btn-primary col-sm">Restart</button>
+    </div>
+    <div class="row">
+      <div class="game">
+        <h3 class="game" v-if="gameOver">Game Over</h3>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
